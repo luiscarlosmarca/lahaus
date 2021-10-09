@@ -20,7 +20,7 @@ public class SeleccionaUbicacionPropiedad implements Task {
         return instrumented(SeleccionaUbicacionPropiedad.class,pais);
     }
 
-    public SeleccionaUbicacionPropiedad yLa(String ciudad){
+    public SeleccionaUbicacionPropiedad yLaCiudadDe(String ciudad){
         this.ciudad=ciudad;
         return this;
     }

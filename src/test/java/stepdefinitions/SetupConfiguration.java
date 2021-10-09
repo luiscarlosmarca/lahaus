@@ -6,19 +6,15 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
 import net.thucydides.core.annotations.Managed;
-import net.thucydides.core.util.EnvironmentVariables;
 import cucumber.api.java.Before;
 import org.openqa.selenium.WebDriver;
 
 import static util.MyMobileFactory.myMobileAndroidDriver;
 public class SetupConfiguration {
-
-    public static EnvironmentVariables environmentVariables = null;
     public static Actor Negan;
     public static Actor Lucilly;
     @Managed(uniqueSession = true)
     public WebDriver hisBrowser;
-
 
     @Before
     public void prepareStage() {

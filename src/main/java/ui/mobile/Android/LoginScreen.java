@@ -6,8 +6,8 @@ import org.openqa.selenium.By;
 public class LoginScreen {
 
 
-    public final static Target FRAME_LOGIN_GOOGLE= Target.the("frame para seleccionar la cuenta de google")
-            .located(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout"));
+    public final static Target VIEW_NO_HABILITADA= Target.the("ciudad no habilitada")
+            .located(By.xpath("//android.widget.ImageView[@content-desc='Próximamente Santa Marta']"));
 
 
 
