@@ -21,6 +21,7 @@ public class BusquedaPropiedadStepDefinition {
     public void inicióLaBusquedaDeSuPropiedad() throws MalformedURLException {
         Lucilly.can(BrowseTheWeb.with(la_haus_main()));
 
+
     }
 
     @When("^el usuario selecciona el (.*) para la (.*)$")
