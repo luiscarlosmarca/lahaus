@@ -21,14 +21,14 @@ Feature: Primera busqueda de propiedad de un usuario nuevo
 
   @TC003
   Scenario: Busquedas de apartamentos habilitados para Mexico
-    When el usuario selecciona el Mexico para la ciudad de Mexico
+    When el usuario selecciona el Mexico para la ciudad de Guadalajara
     And selecciona el tipo de vivienda Casa
     Then el usuario visualizará el módulo de login
 
 
-  @TC004
-  Scenario: Ciudades inhabilitados para Colombia
-    When el usuario selecciona el Mexico para la ciudad de Mexico
-    Then el usuario visualizará las ciudades inhabilitadas para Colombia
+  @TC004 @test
+  Scenario: Ciudades inhabilitados para Mexico
+    When el usuario selecciona el Mexico
+    Then el usuario visualizará las ciudades inhabilitadas para Mexico
 
 

@@ -16,6 +16,7 @@ import static tasks.mobile.SeleccionaTipoPropiedad.buscaUnApartamento;
 import static tasks.mobile.SeleccionaTipoPropiedad.buscarUnaCasa;
 import static tasks.mobile.SeleccionaUbicacionPropiedad.seleccionaEl;
 import static ui.mobile.Android.HomeScreen.BTN_EMPEZAR_BUSQUEDA;
+import static ui.mobile.Android.ParametrosDeBusquedaScreen.BTN_SELECCIONAR_PAIS;
 import static util.Constants.*;
 import static util.MyMobileFactory.la_haus_main;
 
@@ -52,9 +53,9 @@ public class BusquedaPropiedadStepDefinition {
     }
 
 
-    @When("^el usuario selecciona el Mexico para la ciudad de Mexico$")
-    public void elUsuarioSeleccionaElMexicoParaLaCiudadDeMexico() {
-        Lucilly.attemptsTo(seleccionaEl(MEXICO).yLaCiudadDe(CIUDAD_MEXICO));
+    @When("^el usuario selecciona el (.*) para la ciudad de (.*)$")
+    public void elUsuarioSeleccionaElMexicoParaLaCiudadDeMexico(String pais,String ciudad) {
+        Lucilly.attemptsTo(seleccionaEl(pais).yLaCiudadDe(ciudad));
     }
 
     @When("^el usuario selecciona el (.*) para la ciudad de Bogota$")
@@ -62,10 +63,15 @@ public class BusquedaPropiedadStepDefinition {
         Lucilly.attemptsTo(seleccionaEl(pais).yLaCiudadDe(BOGOTA));
     }
 
-    @Then("^el usuario visualizará las ciudades inhabilitadas para Colombia$")
-    public void elUsuarioVisualizaráLasCiudadesInhabilitadasParaColombia() {
+
+    @When("^el usuario selecciona el (.*)$")
+    public void elUsuarioSeleccionaElMexico(String pais) {
+        Lucilly.attemptsTo(Click.on(BTN_SELECCIONAR_PAIS.of(pais)));
+
+    }
+
+    @Then("^el usuario visualizará las ciudades inhabilitadas para Mexico$")
+    public void elUsuarioVisualizaráLasCiudadesInhabilitadasParaMexico() {
         Lucilly.should(GivenWhenThen.seeThat(lasCiudadesNoHabilitadas()));
-
-
     }
 }
