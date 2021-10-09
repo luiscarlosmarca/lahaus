@@ -5,23 +5,22 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 
-import static stepdefinitions.SetupConfiguration.Negan;
-import static stepdefinitions.SetupConfiguration.RickGrimes;
-import static tasks.apis.CreateAnewUser.createAn;
+import java.net.MalformedURLException;
+
+import static stepdefinitions.SetupConfiguration.Lucilly;
+import static tasks.mobile.SetupMobile.openApp;
+import static util.MyMobileFactory.la_haus_main;
 
 
 public class BusquedaPropiedadStepDefinition {
 
-    @Given("^created a (.*) user$")
-    public void cratedAnAnloneUser(String user) {
-        Negan.attemptsTo(createAn(user));
-    }
-
 
     @Given("^Inició la busqueda de su propiedad$")
-    public void inicióLaBusquedaDeSuPropiedad() {
-        
+    public void inicióLaBusquedaDeSuPropiedad() throws MalformedURLException {
+        Lucilly.can(BrowseTheWeb.with(la_haus_main()));
+
     }
 
     @When("^el usuario selecciona el (.*) para la (.*)$")
