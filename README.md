@@ -1,4 +1,4 @@
-# lahaus
+# LaHaus
 Automatizacion de app mobile La Haus Version 3.11.1
 
 ## Tabla de contenidos
