@@ -21,9 +21,9 @@ Es requerido dos variabldes de entorno para la ejecucion de las pruebas mobiles
 - DdeviceName: Dispositivo a que se va ejecutar la prueba, la cual debe tener la aplicacion "Haus" previamente instalada. Este valor se consigue con el siguiente comando:
 ```
 $ adb devices
-
-- Dhub: Es el host que esta corriendo appium, al abrir appium se puede ver este valor.
 ```
+- Dhub: Es el host que esta corriendo appium, al abrir appium se puede ver este valor.
+
 ## Ejecucion
 ***
 ```
