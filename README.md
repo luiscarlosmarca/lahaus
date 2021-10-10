@@ -16,5 +16,6 @@ $ gradle build
 ```
 ## Ejecucion
 ***
+```
 $ Test Mobile: gradle test --tests "runners.mobile.BusquedaPropiedadRunner" -DdeviceName=29bc719f -Dhub=http://127.0.0.1:4723/wd/hub
 $ Test Apis Rest: gradle test --tests "runners.apis.UserRunner" -DbaseUrl=https://reqres.in/
