@@ -1,0 +1,10 @@
+stepdefinitions/SetupConfiguration.java
+ stepdefinitions.SetupConfiguration
+stepdefinitions/apis/UserStepDefinition.java
+ stepdefinitions.apis.UserStepDefinition
+runners/mobile/BusquedaPropiedadRunner.java
+ runners.mobile.BusquedaPropiedadRunner
+stepdefinitions/mobile/BusquedaPropiedadStepDefinition.java
+ stepdefinitions.mobile.BusquedaPropiedadStepDefinition
+runners/apis/UserRunner.java
+ runners.apis.UserRunner

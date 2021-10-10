@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Primera busqueda de propiedad de un usuario nuevo" skipped="0" tests="4" time="101.13" timestamp="2021-10-09 07:09:02"><testcase name="Busquedas de casas habilitadas para Colombia"/><testcase name="Busquedas de apartamentos habilitados para Colombia"/><testcase name="Busquedas de apartamentos habilitados para Mexico"/><testcase name="Ciudades inhabilitados para Mexico"><failure message="Expected enabled element was not enabled" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">Expected enabled element was not enabled</failure><system-err>Expected enabled element was not enabled&#13;
+stepdefinitions.mobile.BusquedaPropiedadStepDefinition.inicióLaBusquedaDeSuPropiedad(BusquedaPropiedadStepDefinition.java:30)&#13;
+cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
+</system-err></testcase></testsuite>
