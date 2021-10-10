@@ -1,0 +1,424 @@
+﻿<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" ""><HTML><HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+     
+<META charset="UTF-8">     
+<META http-equiv="X-UA-Compatible" content="IE=edge">     
+<META name="viewport" content="width=device-width, initial-scale=1">     
+<TITLE>Serenity Reports</TITLE>     <LINK href="favicon.ico" rel="shortcut icon" 
+type="image/x-icon"> <LINK href="apple-icon-57x57.png" rel="apple-touch-icon" 
+sizes="57x57"> <LINK href="apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60"> 
+<LINK href="apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"> <LINK 
+href="apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76"> <LINK href="apple-icon-114x114.png" 
+rel="apple-touch-icon" sizes="114x114"> <LINK href="apple-icon-120x120.png" rel="apple-touch-icon" 
+sizes="120x120"> <LINK href="apple-icon-144x144.png" rel="apple-touch-icon" 
+sizes="144x144"> <LINK href="apple-icon-152x152.png" rel="apple-touch-icon" 
+sizes="152x152"> <LINK href="apple-icon-180x180.png" rel="apple-touch-icon" 
+sizes="180x180"> <LINK href="android-icon-192x192.png" rel="icon" type="image/png" 
+sizes="192x192"> <LINK href="favicon-32x32.png" rel="icon" type="image/png" 
+sizes="32x32"> <LINK href="favicon-96x96.png" rel="icon" type="image/png" sizes="96x96"> 
+<LINK href="favicon-16x16.png" rel="icon" type="image/png" sizes="16x16"> 
+<META name="msapplication-TileColor" content="#ffffff"> 
+<META name="msapplication-TileImage" content="/ms-icon-144x144.png"> 
+<META name="theme-color" content="#ffffff"> <!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">--> 
+<LINK href="Serenity%20Reports_files/all.min.css" rel="stylesheet"> <LINK href="Serenity%20Reports_files/v4-shims.min.css" 
+rel="stylesheet"> <!-- JQuery --> 
+<SCRIPT src="Serenity%20Reports_files/jquery-1.11.1.min.js" type="text/javascript"></SCRIPT>
+<LINK href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css" 
+rel="stylesheet"> <LINK href="Serenity%20Reports_files/chartist.min.css" rel="stylesheet"> 
+<SCRIPT src="Serenity%20Reports_files/chartist.min.js"></SCRIPT>
+ 
+<SCRIPT src="Serenity%20Reports_files/chartist-plugin-tooltip.min.js"></SCRIPT>
+<!-- Required Stylesheets --> <LINK href="Serenity%20Reports_files/bootstrap-treeview.min.css" 
+rel="stylesheet"> <!-- Required Javascript --> 
+<SCRIPT src="Serenity%20Reports_files/bootstrap-treeview.min.js"></SCRIPT>
+<!-- DataTables --> <LINK href="Serenity%20Reports_files/datatables.min.css" 
+rel="stylesheet" type="text/css"> 
+<SCRIPT src="Serenity%20Reports_files/datatables.min.js" type="text/javascript"></SCRIPT>
+ <LINK href="Serenity%20Reports_files/bootstrap.min.css" rel="stylesheet"> 
+<SCRIPT src="Serenity%20Reports_files/bootstrap.min.js"></SCRIPT>
+ 
+<SCRIPT src="Serenity%20Reports_files/datatables.bootstrap4.min.js" type="text/javascript"></SCRIPT>
+ <LINK href="Serenity%20Reports_files/datatables.bootstrap4.min.css" rel="stylesheet" 
+type="text/css"> <LINK href="Serenity%20Reports_files/core.css" 
+rel="stylesheet"> <LINK href="Serenity%20Reports_files/link.css" rel="stylesheet"> 
+<LINK href="Serenity%20Reports_files/screen.css" rel="Stylesheet" type="text/css" 
+media="screen"><!-- JQuery-UI --> <LINK href="Serenity%20Reports_files/jquery-ui.min.css" 
+rel="Stylesheet" type="text/css"> 
+<SCRIPT src="Serenity%20Reports_files/jquery-ui.min.js" type="text/javascript"></SCRIPT>
+<!-- DataTables --> <LINK href="Serenity%20Reports_files/datatables.min.css" 
+rel="stylesheet" type="text/css"> 
+<SCRIPT src="Serenity%20Reports_files/datatables.min.js" type="text/javascript"></SCRIPT>
+ <LINK href="Serenity%20Reports_files/bootstrap.min.css" rel="stylesheet"> 
+<SCRIPT src="Serenity%20Reports_files/bootstrap.min.js"></SCRIPT>
+ 
+<SCRIPT src="Serenity%20Reports_files/datatables.bootstrap4.min.js" type="text/javascript"></SCRIPT>
+ <LINK href="Serenity%20Reports_files/datatables.bootstrap4.min.css" rel="stylesheet" 
+type="text/css">     
+<SCRIPT class="code" type="text/javascript">$(document).ready(function () {
+
+        $('.scenario-result-table').DataTable({
+            "order": [[0, "asc",], [3, "asc",]],
+            "pageLength": 10,
+            "language": {
+                searchPlaceholder: "Filter",
+                search: ""
+            }
+        });
+
+        // Results table
+        $('#test-results-table').DataTable({
+            "order": [[0, "asc",], [3, "asc",]],
+            "pageLength": 10,
+            "lengthMenu": [[10, 25, 50, 100, 200, -1], [10, 25, 50, 100, 200, "All"]]
+        });
+
+        $('#evidence-table').DataTable({
+                    searching: false,
+                    paging: false,
+                    info: false
+        });
+
+        $(".feature-coverage-table").DataTable({
+            searching: false,
+            paging: false,
+            info: false
+        });
+
+        $(".feature-coverage-table-with-pagination").DataTable({
+            order: [[0, "asc",]],
+            pageLength: 10,
+            language: {
+                searchPlaceholder: "Filter",
+                search: ""
+            }
+        });
+    });
+    </SCRIPT>
+ 
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD> 
+<BODY class="results-page">
+<DIV id="topheader">
+<DIV id="topbanner">
+<DIV id="logo"><A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/index.html"><IMG 
+src="Serenity%20Reports_files/serenity-logo.png" border="0"></A></DIV>
+<DIV id="projectname-banner" style="float: right;"><SPAN 
+class="projectname"></SPAN>         </DIV></DIV></DIV>
+<DIV class="middlecontent">
+<DIV id="contenttop">
+<DIV class="middlebg"><SPAN class="breadcrumbs"><A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/index.html">Home</A> 
+        </SPAN>         </DIV>
+<DIV class="rightbg"></DIV></DIV>
+<DIV class="clr"></DIV><!--/* starts second table*/--> 
+<DIV>
+<UL class="nav nav-tabs" role="tablist">
+  <LI class="active"><A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/index.html#"><I 
+  class="fa fa-check-square-o"></I> Overall Test Results</A></LI>
+  <LI><A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/capabilities.html"><I 
+  class="fa fa-book"></I> Requirements</A></LI>
+  <LI><A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><I 
+  class="fa fa-comments-o"></I> Stories</A></LI>
+  <LI><A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><I 
+  class="fa fa-comments-o"></I> Features</A></LI></UL><SPAN 
+class="date-and-time"><A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/build-info.html"><I 
+class="fa fa-info-circle"></I></A> Report generated 09-10-2021 19:13</SPAN>     
+<BR style="clear: left;"></DIV>
+<DIV class="clr"></DIV>
+<DIV id="beforetable"></DIV>
+<DIV id="results-dashboard">
+<DIV class="middlb">
+<DIV class="table">
+<H2>Test Results: All Tests</H2>
+<TABLE class="overview">
+  <TBODY>
+  <TR>
+    <TD width="375" valign="top">
+      <DIV class="test-count-summary">
+      <DIV class="test-count-title">                                4 test 
+      scenarios                                  |                               
+            <A title="Download CSV" href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/results.csv"><I 
+      title="Download CSV" class="fa fa-download"></I></A>                       
+                </DIV></DIV>
+      <DIV>
+      <UL class="nav nav-tabs">
+        <LI class="active"><A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/index.html#summary" 
+        data-toggle="tab"><I class="fas fa-home"></I> Summary</A></LI>
+        <LI><A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/index.html#tests" 
+        data-toggle="tab"><I class="fas fa-tachometer-alt"></I> Test             
+                                       Results</A></LI></UL>
+      <DIV class="card border">
+      <DIV class="tab-content" id="pills-tabContent">
+      <DIV class="tab-pane fade in active" id="summary">
+      <DIV class="container-fluid">
+      <DIV class="row">
+      <DIV class="col-sm-4">
+      <DIV class="chart-container automated-and-manual-results" style="width: 300px;">
+      <DIV class="ct-chart ct-square"></DIV></DIV>
+<SCRIPT>
+
+                                                                var labels = ['100%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+                                                                // Our series array that contains series objects or in this case series data arrays
+
+                                                                var series = [{meta: 'Passing tests (automated)', value: 4}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+
+                                                                // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
+                                                                // as you saw in the previous example
+                                                                var options = {
+                                                                    width: 350,
+                                                                    height: 300
+                                                                };
+
+
+                                                                new Chartist.Pie('.ct-chart', {
+                                                                    series: series,
+                                                                    labels: labels
+                                                                }, {
+                                                                    plugins: [Chartist.plugins.tooltip()],
+                                                                    donut: true,
+                                                                    donutWidth: 60,
+                                                                    donutSolid: true,
+                                                                    startAngle: 270,
+                                                                    showLabel: true
+                                                                }, options);
+
+
+                                                                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                                                                    new Chartist.Pie('.ct-chart', {
+                                                                        series: series,
+                                                                        labels: labels
+                                                                    }, {
+                                                                        plugins: [Chartist.plugins.tooltip()],
+                                                                        donut: true,
+                                                                        donutWidth: 60,
+                                                                        donutSolid: true,
+                                                                        startAngle: 270,
+                                                                        showLabel: true
+                                                                    }, options);
+                                                                });
+
+
+                                                            </SCRIPT>
+                                                           </DIV>
+      <DIV class="col-sm-8">
+      <TABLE class="table">
+        <THEAD>
+        <TR>
+          <TH scope="col">Scenario Results (including rows of test             
+                                                                   data)         
+                                                                    </TH>
+          <TH class="automated-stats" colspan="2" scope="col">                 
+                                                               Automated         
+                                                                    
+        </TH></TR></THEAD>
+        <TBODY>
+        <TR>
+          <TD class="aggregate-result-count"><A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/01f5288b80adbd3af52a8ed68a4a616d3164f750229f80da1ef344382d948835.html"><I 
+            class="fa fa-check-circle-o success-icon"></I>&nbsp;Passing</A>      
+                                                                           </TD>
+          <TD class="automated-stats">4</TD>
+          <TD class="automated-stats">100%</TD></TR>
+        <TR>
+          <TD class="aggregate-result-count"><I class="fa fa-stop-circle-o pending-icon"></I>&nbsp;Pending 
+                                                                                
+          </TD>
+          <TD class="automated-stats">0</TD>
+          <TD class="automated-stats"></TD></TR>
+        <TR>
+          <TD class="aggregate-result-count"><I 
+            class="fa fa-ban ignored-icon"></I>&nbsp;Ignored                     
+                                                        </TD>
+          <TD class="automated-stats">0</TD>
+          <TD class="automated-stats"></TD></TR>
+        <TR>
+          <TD class="aggregate-result-count"><I class="fa fa-fast-forward skip-icon"></I>&nbsp;Skipped 
+                                                                            </TD>
+          <TD class="automated-stats">0</TD>
+          <TD class="automated-stats"></TD></TR>
+        <TR>
+          <TD colspan="3"><I 
+            class="fa fa-times failure-icon"></I>&nbsp;<EM>Unsuccessful</EM>     
+                                                                                 
+               </TD></TR>
+        <TR>
+          <TD class="aggregate-result-count indented-error-category"><I class="fa fa-times-circle failure-icon"></I>&nbsp;Failed 
+                                                                            </TD>
+          <TD class="automated-stats">0</TD>
+          <TD class="automated-stats"></TD>
+        <TR>
+          <TD class="aggregate-result-count indented-error-category"><I class="fa fa-exclamation-triangle error-icon"></I>&nbsp;Broken 
+                                                                            </TD>
+          <TD class="automated-stats">0</TD>
+          <TD class="automated-stats"></TD>
+        <TR>
+          <TD class="aggregate-result-count indented-error-category"><I class="fa fa-chain-broken compromised-icon"></I>&nbsp;Compromised 
+                                                                            </TD>
+          <TD class="automated-stats">0</TD>
+          <TD class="automated-stats"></TD></TR>
+        <TR class="summary-stats">
+          <TD class="aggregate-result-count">Total</TD>
+          <TD class="automated-stats">4</TD>
+          <TD class="automated-stats"></TD></TR></TBODY></TABLE></DIV></DIV>
+      <DIV class="row">
+      <DIV class="col-sm-12">
+      <TABLE class="table">
+        <THEAD>
+        <TR>
+          <TH>Execution Time</TH>
+          <TH>Clock Time</TH>
+          <TH>Fastest Test</TH>
+          <TH>Slowest Test</TH>
+          <TH>Average Execution Time</TH></TR></THEAD>
+        <TBODY>
+        <TR>
+          <TD> 1m 46s</TD>
+          <TD> 3m 34s</TD>
+          <TD>20s</TD>
+          <TD>40s</TD>
+          <TD>26s</TD></TR></TBODY></TABLE></DIV></DIV>
+      <DIV class="row">
+      <DIV class="col-sm-12">
+      <H3>Functional Coverage Overview</H3>
+      <H4>Features</H4>
+      <TABLE class="table feature-coverage-table" id="Feature">
+        <THEAD>
+        <TR>
+          <TH>Feature</TH>
+          <TH style="width: 7.5em;">Scenarios</TH>
+          <TH style="width: 7.5em;">% Pass</TH>
+          <TH style="width: 7.5em;">Result</TH>
+          <TH>Coverage</TH></TR></THEAD>
+        <TBODY>
+        <TR>
+          <TD><A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/49ddddf8da561145895a61d445c2c8320fd77c0c5eb5362ac197cfc97bc3704f.html">Primera 
+            busqueda de propiedad de un usuario nuevo</A>                        
+                                                                 </TD>
+          <TD>4</TD>
+          <TD>100%</TD>
+          <TD><I title="SUCCESS" 
+            class="fa fa-check-circle-o success-icon "></I>                      
+                                                                   </TD>
+          <TD>
+            <DIV class="progress">
+            <DIV title="100% success" class="progress-bar" role="progressbar" 
+            aria-valuenow="4" aria-valuemin="0" aria-valuemax="100" style="width: 100%; background-color: rgb(48, 203, 35);"></DIV></DIV></TD></TR>
+        <TR>
+          <TD>                                                                 
+                               Api USERS of microservice KING'S LANDING          
+                                                                               
+          </TD>
+          <TD>0</TD>
+          <TD>0%</TD>
+          <TD><I class="fa fa-stop-circle-o pending-icon"></I>                 
+                                                                        </TD>
+          <TD>
+            <DIV class="progress"></DIV></TD></TR></TBODY></TABLE></DIV></DIV>
+      <DIV class="row">
+      <DIV class="col-sm-12">
+      <H3>Tags</H3>
+      <DIV class="card">
+      <DIV class="card-body">
+      <DIV><A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/3dde7868f9ed2482ff2ee5d8e12af5ce7cdc5018290da72655c8ede28959326f.html"><SPAN 
+      class="badge" style="margin: 1em; padding: 4px; background-color: rgb(29, 153, 24);"><I 
+      class="fa fa-tag"></I> Tc001&nbsp;&nbsp;&nbsp;1</SPAN>                     
+                                                      </A>                       
+                                                    <A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/47c7a0ff806dbeb161318d44dcd65bc6a9f653a7768f300bd5ce4cd78ec50fa7.html"><SPAN 
+      class="badge" style="margin: 1em; padding: 4px; background-color: rgb(29, 153, 24);"><I 
+      class="fa fa-tag"></I> Tc002&nbsp;&nbsp;&nbsp;1</SPAN>                     
+                                                      </A>                       
+                                                    <A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/232726065f1c220884c70659af33a92507866408f507cd9cb4caf76acf7ee40b.html"><SPAN 
+      class="badge" style="margin: 1em; padding: 4px; background-color: rgb(29, 153, 24);"><I 
+      class="fa fa-tag"></I> Tc003&nbsp;&nbsp;&nbsp;1</SPAN>                     
+                                                      </A>                       
+                                                    <A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/89b87f3edfccfefcc077e8d94627b5dc6c3c947d258964de9c5fd218e8ea5dfe.html"><SPAN 
+      class="badge" style="margin: 1em; padding: 4px; background-color: rgb(29, 153, 24);"><I 
+      class="fa fa-tag"></I> Tc004&nbsp;&nbsp;&nbsp;1</SPAN>                     
+                                                      </A>                       
+                                                    <A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/24aacda3e479b17aef4c2fafa3fb6f2fcac1704edab883a1848f7adc3af41546.html"><SPAN 
+      class="badge" style="margin: 1em; padding: 4px; background-color: rgb(29, 153, 24);"><I 
+      class="fa fa-tag"></I> Test&nbsp;&nbsp;&nbsp;1</SPAN>                      
+                                                     </A>                        
+                                               </DIV></DIV></DIV>
+      <DIV class="card">
+      <DIV class="card-body">
+      <H5 class="card-title">Capability</H5>
+      <DIV><A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/69fae322db0a8683cbb201f7f892d175aae3842343268bfa0f7134d50dceec90.html"><SPAN 
+      class="badge" style="margin: 1em; padding: 4px; background-color: rgb(29, 153, 24);"><I 
+      class="fa fa-tag"></I> Mobile&nbsp;&nbsp;&nbsp;4</SPAN>                    
+                                                       </A>                      
+                                                 
+      </DIV></DIV></DIV></DIV></DIV></DIV></DIV>
+      <DIV class="tab-pane fade" id="tests">
+      <DIV class="container-fluid">
+      <DIV class="row">
+      <DIV class="col-sm-12">
+      <H3><I class="fas fa-cogs"></I> Automated Tests</H3>
+      <TABLE class="scenario-result-table table" id="scenario-results">
+        <THEAD>
+        <TR>
+          <TH>feature</TH>
+          <TH class="test-name-column">Scenario</TH>
+          <TH>Steps</TH>
+          <TH>Start Time</TH>
+          <TH>Duration</TH>
+          <TH>Result</TH></TR></THEAD>
+        <TBODY>
+        <TR class="scenario-result SUCCESS">
+          <TD><A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/49ddddf8da561145895a61d445c2c8320fd77c0c5eb5362ac197cfc97bc3704f.html">Primera 
+            busqueda de propiedad de un usuario nuevo</A>                        
+                                         </TD>
+          <TD><A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/d7f83b0994dc66b36bab9d57348b6e64ac987dbe08d8b659c1eded5383b04851.html">Busquedas 
+            de casas habilitadas para Colombia</A>                               
+                                  </TD>
+          <TD>4</TD>
+          <TD>19:09:02</TD>
+          <TD>00:40</TD>
+          <TD><I title="SUCCESS" 
+            class="fa fa-check-circle-o success-icon "></I> <SPAN style="display: none;">SUCCESS</SPAN></TD></TR>
+        <TR class="scenario-result SUCCESS">
+          <TD><A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/49ddddf8da561145895a61d445c2c8320fd77c0c5eb5362ac197cfc97bc3704f.html">Primera 
+            busqueda de propiedad de un usuario nuevo</A>                        
+                                         </TD>
+          <TD><A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/620b90a37d6831408685cb15b4b41c11d99e1350b69f7bddefe6ec917fe0f95a.html">Busquedas 
+            de apartamentos habilitados para Colombia</A>                        
+                                         </TD>
+          <TD>4</TD>
+          <TD>19:09:44</TD>
+          <TD>00:24</TD>
+          <TD><I title="SUCCESS" 
+            class="fa fa-check-circle-o success-icon "></I> <SPAN style="display: none;">SUCCESS</SPAN></TD></TR>
+        <TR class="scenario-result SUCCESS">
+          <TD><A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/49ddddf8da561145895a61d445c2c8320fd77c0c5eb5362ac197cfc97bc3704f.html">Primera 
+            busqueda de propiedad de un usuario nuevo</A>                        
+                                         </TD>
+          <TD><A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/c17c7b709cae30fd8f43ffc2a5d92e9c200073d16ec97e4b8aa8b5bd4e2957aa.html">Busquedas 
+            de apartamentos habilitados para Mexico</A>                          
+                                       </TD>
+          <TD>4</TD>
+          <TD>19:10:09</TD>
+          <TD>00:21</TD>
+          <TD><I title="SUCCESS" 
+            class="fa fa-check-circle-o success-icon "></I> <SPAN style="display: none;">SUCCESS</SPAN></TD></TR>
+        <TR class="scenario-result SUCCESS">
+          <TD><A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/49ddddf8da561145895a61d445c2c8320fd77c0c5eb5362ac197cfc97bc3704f.html">Primera 
+            busqueda de propiedad de un usuario nuevo</A>                        
+                                         </TD>
+          <TD><A href="file:///C:/Users/57305/Documents/Code/lahaus/lahaus/target/site/serenity/65d78ed9635bff097b8e9fd0b59d29f780fc565a78ca62dc99d49e631af8a1a7.html">Ciudades 
+            inhabilitados para Mexico</A>                                        
+                         </TD>
+          <TD>3</TD>
+          <TD>19:12:36</TD>
+          <TD>00:20</TD>
+          <TD><I title="SUCCESS" 
+            class="fa fa-check-circle-o success-icon "></I> <SPAN style="display: none;">SUCCESS</SPAN></TD></TR></TBODY></TABLE></DIV></DIV>
+      <DIV class="row">
+      <DIV class="col-sm-12">
+      <H3><I class="fas fa-edit"></I> Manual Tests</H3>                          
+                            No manual tests were recorded                        
+                                   
+  </DIV></DIV></DIV></DIV></DIV></DIV></DIV></TD></TR></TBODY></TABLE></DIV></DIV></DIV></DIV>
+<DIV id="beforefooter"></DIV>
+<DIV class="container-fluid">
+<DIV class="row">
+<DIV class="col-sm-12"><SPAN class="version">Serenity BDD version 2.0.48</SPAN>  
+       </DIV></DIV></DIV></BODY></HTML>

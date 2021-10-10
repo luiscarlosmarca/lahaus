@@ -27,7 +27,7 @@ public class CrearUnNuevoUsuario implements Task {
                 with(request->request
                         .header("Content-Type","application/json")
                         .body(myUser)));
-        actor.should(seeThat(verificarCodigoEstado(CODIGO_EXITOSO)));
+        actor.should(seeThat(verificarCodigoEstado(CREACION_EXITOSA)));
         String id = SerenityRest.lastResponse().header("id");
         actor.remember(ID,id);
         myUser.setId(id);
