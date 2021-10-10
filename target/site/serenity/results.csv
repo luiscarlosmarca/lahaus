@@ -1,4 +1,5 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
+"Regresion del CRUD del Api USERS","Crear, listar, actualizar y eliminar un usuario","SUCCESS","2021-10-09T20:33:12.325-05:00[America/Bogota]","0.0","8.89"
 "Primera busqueda de propiedad de un usuario nuevo","Busquedas de casas habilitadas para Colombia","SUCCESS","2021-10-09T19:09:02.085-05:00[America/Bogota]","0.0","40.09"
 "Primera busqueda de propiedad de un usuario nuevo","Busquedas de apartamentos habilitados para Colombia","SUCCESS","2021-10-09T19:09:44.094-05:00[America/Bogota]","0.0","24.75"
 "Primera busqueda de propiedad de un usuario nuevo","Busquedas de apartamentos habilitados para Mexico","SUCCESS","2021-10-09T19:10:09.065-05:00[America/Bogota]","0.0","21.26"

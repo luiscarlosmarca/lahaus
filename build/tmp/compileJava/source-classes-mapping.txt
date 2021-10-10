@@ -14,8 +14,6 @@ ui/mobile/Android/LoginScreen.java
  ui.mobile.Android.LoginScreen
 tasks/mobile/SeleccionaUbicacionPropiedad.java
  tasks.mobile.SeleccionaUbicacionPropiedad
-util/GodCreator.java
- util.GodCreator
 util/GenerateDataFake.java
  util.GenerateDataFake
 util/FitTime.java
@@ -23,17 +21,19 @@ util/FitTime.java
  util.FitTime$1
 models/User.java
  models.User
+tasks/apis/EliminarUsuario.java
+ tasks.apis.EliminarUsuario
 models/builder/UserBuilder.java
  models.builder.UserBuilder
 util/MyMobileFactory.java
  util.MyMobileFactory
 questions/mobile/VerListaCiudadesScreen.java
  questions.mobile.VerListaCiudadesScreen
+tasks/apis/ListarUsuarios.java
+ tasks.apis.ListarUsuarios
 ui/mobile/Android/ParametrosDeBusquedaScreen.java
  ui.mobile.Android.ParametrosDeBusquedaScreen
 ui/mobile/Android/HomeScreen.java
  ui.mobile.Android.HomeScreen
-util/GetResponse.java
- util.GetResponse
 tasks/apis/CrearUnNuevoUsuario.java
  tasks.apis.CrearUnNuevoUsuario

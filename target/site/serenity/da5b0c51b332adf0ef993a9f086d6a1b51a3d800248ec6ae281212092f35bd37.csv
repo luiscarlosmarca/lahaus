@@ -1,2 +1,2 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Primera busqueda de propiedad de un usuario nuevo","Ciudades inhabilitados para Mexico","FAILURE","2021-10-09T19:10:30.592-05:00[America/Bogota]","0.0","15.03"
+"Regresion del CRUD del Api USERS","Crear, listar, actualizar y eliminar un usuario","FAILURE","2021-10-09T20:31:03.637-05:00[America/Bogota]","0.0","53.42"
