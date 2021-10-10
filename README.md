@@ -8,10 +8,10 @@
 
 ## Instalacion
 ***
-
 ```
 $ git clone https://github.com/luiscarlosmarca/lahaus.git
 $ gradle build
+```
 
 ## Consideraciones
 ***
