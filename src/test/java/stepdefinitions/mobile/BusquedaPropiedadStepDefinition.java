@@ -74,4 +74,6 @@ public class BusquedaPropiedadStepDefinition {
     public void elUsuarioVisualizaráLasCiudadesInhabilitadasParaMexico() {
         Lucilly.should(GivenWhenThen.seeThat(lasCiudadesNoHabilitadas()));
     }
+
+
 }

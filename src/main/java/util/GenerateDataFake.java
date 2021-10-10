@@ -17,20 +17,16 @@ import static util.Constants.*;
 public class GenerateDataFake {
 
     final Faker faker = new Faker(Locale.ENGLISH);
-    public static String tmp_sms = "";
+
     public static GenerateDataFake generateTo() {
         return new GenerateDataFake();
     }
 
-    public String aPassword(){
-        return faker.gameOfThrones().city()+"123456";
-
+    public String ajob(){
+        return faker.superhero().name();
     }
-    public String aEmail(){
-        String str= faker.dune().title().trim()+"@"+(faker.funnyName().name()).trim()+".com";
-        String noSpaceStr = str.replaceAll("\\s", ""); // using built in method
-        return noSpaceStr;
-
+    public String aName(){
+       return faker.gameOfThrones().dragon();
     }
 
 

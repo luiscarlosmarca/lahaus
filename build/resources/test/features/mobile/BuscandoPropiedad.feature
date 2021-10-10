@@ -27,7 +27,7 @@ Feature: Primera busqueda de propiedad de un usuario nuevo
 
 
   @TC004 @test
-  Scenario: Ciudades inhabilitados para Mexico
+  Scenario: Ciudades inhabilitadas para Mexico
     When el usuario selecciona el pais Mexico
     Then el usuario visualizará las ciudades inhabilitadas para Mexico
 

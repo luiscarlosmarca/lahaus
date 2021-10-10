@@ -1,1 +1,1 @@
-gradle clean aggregate test --tests "runners.mobile.BusquedaPropiedadRunner" -DdeviceName=29bc719f -Dhub=http://127.0.0.1:4723/wd/hub -DbaseUrl=
+gradle clean aggregate test --tests "runners.mobile.BusquedaPropiedadRunner" -DdeviceName=29bc719f -Dhub=http://127.0.0.1:4723/wd/hub -DbaseUrl=https://reqres.in/

@@ -6,16 +6,16 @@ import net.serenitybdd.screenplay.Question;
 
 
 
-public class VerifyStatusCode implements Question<Boolean> {
+public class VerificarCodigoEstado implements Question<Boolean> {
 
     int code;
 
-    public VerifyStatusCode(int code) {
+    public VerificarCodigoEstado(int code) {
         this.code = code;
     }
 
-    public static VerifyStatusCode verifyStatusCode(int code){
-        return new VerifyStatusCode(code);
+    public static VerificarCodigoEstado verificarCodigoEstado(int code){
+        return new VerificarCodigoEstado(code);
     }
     @Override
     public Boolean answeredBy(Actor actor) {
