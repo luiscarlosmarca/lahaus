@@ -28,9 +28,10 @@ public class CrearUnNuevoUsuario implements Task {
                         .header("Content-Type","application/json")
                         .body(myUser)));
         actor.should(seeThat(verificarCodigoEstado(CODIGO_EXITOSO)));
-        actor.remember(USER,myUser);
         String id = SerenityRest.lastResponse().header("id");
         actor.remember(ID,id);
+        myUser.setId(id);
+        actor.remember(USER,myUser);
     }
 
 }

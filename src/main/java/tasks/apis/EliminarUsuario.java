@@ -1,25 +1,22 @@
 package tasks.apis;
 
 import models.User;
-import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.rest.interactions.Post;
 import net.serenitybdd.screenplay.rest.interactions.Put;
 
-import static models.builder.UserBuilder.aNewUser;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static questions.apis.VerificarCodigoEstado.verificarCodigoEstado;
 import static util.Constants.*;
 import static util.GenerateDataFake.generateTo;
 
-public class ActualizarUsuario implements Task {
+public class EliminarUsuario implements Task {
 
     private User myUser;
 
-    public static ActualizarUsuario actualizarUsuario() {
-        return instrumented(ActualizarUsuario.class);
+    public static EliminarUsuario actualizarUsuario() {
+        return instrumented(EliminarUsuario.class);
     }
 
     @Override
