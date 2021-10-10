@@ -30,7 +30,7 @@ public class BusquedaPropiedadStepDefinition {
         Lucilly.attemptsTo(Click.on(BTN_EMPEZAR_BUSQUEDA));
     }
 
-    @When("^el usuario selecciona el (.*) para la ciudad de Medellin$")
+    @When("^el usuario selecciona el (.*) en Medellin$")
     public void elUsuarioSeleccionaElPaisParaLaCiudad(String pais) {
         Lucilly.attemptsTo(seleccionaEl(pais).yLaCiudadDe(MEDELLIN));
         
@@ -58,13 +58,13 @@ public class BusquedaPropiedadStepDefinition {
         Lucilly.attemptsTo(seleccionaEl(pais).yLaCiudadDe(ciudad));
     }
 
-    @When("^el usuario selecciona el (.*) para la ciudad de Bogota$")
+    @When("^el usuario selecciona el (.*) para Bogota$")
     public void elUsuarioSeleccionaElColombiaParaLaCiudadDeBogota(String pais) {
         Lucilly.attemptsTo(seleccionaEl(pais).yLaCiudadDe(BOGOTA));
     }
 
 
-    @When("^el usuario selecciona el (.*)$")
+    @When("^el usuario selecciona el pais (.*)$")
     public void elUsuarioSeleccionaElMexico(String pais) {
         Lucilly.attemptsTo(Click.on(BTN_SELECCIONAR_PAIS.of(pais)));
 

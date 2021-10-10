@@ -7,14 +7,14 @@ Feature: Primera busqueda de propiedad de un usuario nuevo
 
   @TC001
   Scenario: Busquedas de casas habilitadas para Colombia
-    When el usuario selecciona el Colombia para la ciudad de Medellin
+    When el usuario selecciona el Colombia en Medellin
     And selecciona el tipo de vivienda Casa
     Then el usuario visualizará el módulo de login
 
 
   @TC002
   Scenario: Busquedas de apartamentos habilitados para Colombia
-    When el usuario selecciona el Colombia para la ciudad de Bogota
+    When el usuario selecciona el Colombia para Bogota
     And selecciona el tipo de vivienda Apartamento
     Then el usuario visualizará el módulo de login
 
@@ -27,8 +27,8 @@ Feature: Primera busqueda de propiedad de un usuario nuevo
 
 
   @TC004 @test
-  Scenario: Ciudades inhabilitados para Mexico
-    When el usuario selecciona el Mexico
+  Scenario: Ciudades inhabilitadas para Mexico
+    When el usuario selecciona el pais Mexico
     Then el usuario visualizará las ciudades inhabilitadas para Mexico
 
 
