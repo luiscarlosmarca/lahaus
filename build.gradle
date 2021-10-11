@@ -37,8 +37,6 @@ ext{
 }
 
 dependencies {
-	compile group: 'com.microsoft.azure', name: 'adal4j', version: '1.6.4'
-	compile group: 'com.microsoft.rest', name: 'client-runtime', version: '1.7.5'
 	compile group: 'com.github.javafaker', name: 'javafaker', version: '1.0.1'
 	testImplementation "net.serenity-bdd:serenity-core:2.0.70"
 	testImplementation "net.serenity-bdd:serenity-junit:2.0.70"
