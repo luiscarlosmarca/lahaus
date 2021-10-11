@@ -49,7 +49,7 @@ dependencies {
 	testImplementation 'junit:junit:4.12'
 	testImplementation 'org.assertj:assertj-core:3.8.0'
 	testImplementation 'org.slf4j:slf4j-simple:1.7.21'
-	compile group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
+	
 	testImplementation group: 'org.hamcrest', name: 'hamcrest-library', version: '2.2'
 
 }
