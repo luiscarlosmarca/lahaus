@@ -19,9 +19,9 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
     - name: Build with Gradle
-      run: ./gradle build
+      run: gradle build
 
     - name: Run Api Testing
-      run: ./gradle clean aggregate test --tests "runners.apis.UserRunner" -DbaseUrl=https://reqres.in/
+      run: gradle clean aggregate test --tests "runners.apis.UserRunner" -DbaseUrl=https://reqres.in/
       
   
