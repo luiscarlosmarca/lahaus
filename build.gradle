@@ -38,7 +38,7 @@ ext{
 
 dependencies {
 
-        compile group: 'com.github.javafaker', name: 'javafaker', version: '1.0.1'
+        compile group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
 	testImplementation "net.serenity-bdd:serenity-core:2.0.70"
 	testImplementation "net.serenity-bdd:serenity-junit:2.0.70"
 	implementation "net.serenity-bdd:serenity-screenplay:2.0.70"
