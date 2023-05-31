@@ -34,9 +34,11 @@ Además de las herramientas mencionadas, el proyecto se adhiere a los principios
 
 Para obtener más detalles sobre la ejecución de las pruebas y ver los informes generados, puedes acceder al siguiente enlace:
 
-[Ver informe ejecución](https://github.com/luiscarlosmarca/lahaus/blob/main/target/site/serenity/index.html)
+[Ver informe ejecución](target/site/serenity/index.html)
 
 [Ver más proyectos](https://luiscarlosmarca.github.io/intro-project/intro.html)
+
+[Ir al repositorio](https://github.com/luiscarlosmarca/lahaus)
 ## Tecnologias
 ***
 
