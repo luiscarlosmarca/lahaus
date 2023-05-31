@@ -36,6 +36,7 @@ Para obtener más detalles sobre la ejecución de las pruebas y ver los informes
 
 [Ver informe ejecución](https://github.com/luiscarlosmarca/lahaus/blob/main/target/site/serenity/index.html)
 
+[Ver más proyectos](https://luiscarlosmarca.github.io/intro-project/intro.html)
 ## Tecnologias
 ***
 
